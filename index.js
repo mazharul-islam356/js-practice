@@ -1,66 +1,63 @@
-// else if condition
+// put on any varibale
+// const sayHello = function() {
+//   console.log("hello");
+// };
 
-let day = 3;
+// sayHello();
 
-if (day === 1) {
-  console.log("sataruday");
-} else if (day === 2) {
-  console.log("sunday");
-} else if (day === 3) {
-  console.log("monday");
-} else {
-  console.log("invalid day");
-}
+// assining
 
-// switch
+// function greet() {
+//   console.log("hi");
+// }
 
-let day = 1;
+// const another = greet;
 
-switch (day) {
-  case 1:
-    console.log("satarday");
-    break;
-  case 2:
-    console.log("sunday");
-    break;
-  case 3:
-    console.log("monday");
-    break;
-  default:
-    console.log("invalid day");
-}
+// another();
 
-// loop
+// higher order function
 
-for (let i = 1; i <= 5; i++) {
-  console.log("number", i);
-}
+// as a parameter
 
-let password = "";
-const correctPassword = "magic";
+// function greetUser(name, callback) {
+//   console.log("hello", name);
+//   callback();
+// }
 
-while (password !== correctPassword) {
-  password = prompt("Enter the secret password:");
+// function sayBye() {
+//   console.log("bye");
+// }
 
-  if (password !== correctPassword) {
-    alert("Wrong! Try again.");
-  }
-}
+// greetUser("mazhar", sayBye);
 
-alert("Access Granted!");
+// as a return
 
-// normal function
+// function multiplier(x) {
+//   return function(y) {
+//     return x * y;
+//   };
+// }
 
-function add(a, b, c) {
-  return a + b - c;
-}
+// const double = multiplier(2);
+// console.log(double(5));
 
-// console.log(add(5, 7, 2));
+// function proccessUser(callback) {
+//   const name = "mazhar";
+//   callback(name);
+// }
 
-// array function
-const multiply = (a, b) => {
-  let result = a + b;
-  return result;
-};
+// proccessUser(function(name) {
+//   console.log("user " + name);
+// });
 
-console.log(multiply(2, 8));
+const num = [7, 14, 5, 3, 78, 90];
+
+// even
+// double
+// sum
+
+const result = num
+  .filter((num) => num % 2 === 0)
+  .map((num) => num * 2)
+  .reduce((acc, curr) => acc + curr, 0);
+console.log(result);
